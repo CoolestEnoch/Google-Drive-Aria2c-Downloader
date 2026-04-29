@@ -1,10 +1,12 @@
+#!/usr/bin/python
+
 import requests
 import re
 import os
 from colorama import Fore, Style
 
 # Download Folder Path
-download_dir = "/home/ubuntu/downloads"
+download_dir = os.getcwd()
 
 print(Style.BRIGHT + Fore.LIGHTCYAN_EX + '''
 
@@ -84,7 +86,8 @@ aria2c_exit_code = -1
 
 while aria2c_exit_code != 0:
     aria2c_exit_code = os.system(f'''aria2c \\
-        -x4 \\
+        -x 16 \\
+        -s 16 \\
         --continue=true \\
         -d {download_dir} \\
         --file-allocation=none \\

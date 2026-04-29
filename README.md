@@ -43,19 +43,21 @@ Google Drive Aria2c Downloader is a Python script that allows you to download fi
    brew install aria2      # macOS
    ```
    
-4. Replace download_path value within google-downloader.py according to your directory.
+4. Change the python intepreter at first line of `google-downloader.py` to which python you want to use. On my Arch Linux is at `/usr/bin/python`.
+
+5. Place `google-downloader.py` to your `PATH`
 
 ## Usage
 
 Run the script:
 ```sh
-python google-downloader.py
+google-downloader.py
 ```
 
 Enter the Google Drive file URL when prompted. The script will:
 1. Extract the file ID from the URL.
 2. Fetch the UUID and filename from Google Drive.
-3. Start downloading the file using `aria2c`.
+3. Start downloading the file to where you at using `aria2c`.
 
 ## Example
 ```
